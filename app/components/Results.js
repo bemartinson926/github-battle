@@ -16,6 +16,12 @@ function StartOver () {
 }
 
 function Results (props) {
+  if (props.isLoading) {
+    return (
+      <p>Loading!</p>
+    )
+  }
+
   if (props.scores[0] === props.scores[1]) {
     <div className="jumbotron col-sm-12 test-center" style={styles.tranparentBg}>
       <h1>It's a tie</h1>
